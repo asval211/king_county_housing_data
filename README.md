@@ -14,7 +14,7 @@ A Seattle real estate firm wants their clients to have a prediction for the sale
 
 ## Data
 
-We used data from kc_house_data.csv and column_names.md. This data contains information that:
+We used data from kc_house_data.csv and column_names.md. This data contains the following information:
 
 * Describes how popular movies are
 * The people who worked on the movies
