@@ -1,12 +1,12 @@
 # Phase Two Project Repo
 
-# Microsoft Film Production: Data Analysis & Strategy Recommendations
+# King County, Washington: Data Analysis & Strategy Recommendations
 
 **Authors**: Pete VanZandt, Emma Choate, Alex Valencia
 
 ## Overview
 
-This project analyzes the question "What makes a successful movie?" for Microsoft, which is making a movie studio but not well-versed in the filming industry. With our analysis, we found the best people to hire to make a movie based on how popular they are and how much money their movies make. We outline the best decisions to make to maximize profits and movie ratings.
+For this project, you will use linear regression to model housing sales in King County, a northwestern county in Washington state.
 
 ## Business Problem
 
@@ -80,7 +80,7 @@ We plotted the most profitable genres by the month that they were released. In g
 
 Please review our full analysis in [our Jupyter Notebook](./microsoft_movie_analysis_final.ipynb) or our [presentation](./Microsoft_Movie_Analysis_Presentation.pdf)
 
-For any additional questions, please contact **Alex Valencia - asvalencia1688@gmail.com, Jordan Johnson - johnsonjordan556677@gmail.com, Warren Umbach - umbach4@gmail.com**
+For any additional questions, please contact **Pete VanZandt - pevanzandt@gmail.com, Emma Choate - emmachoate11@gmail.com, Alex Valencia - asvalencia1688@gmail.com**
 
 ## Repository Structure
 
