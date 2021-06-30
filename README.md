@@ -16,27 +16,27 @@ A Seattle real estate firm wants their clients to have a prediction for the sale
 
 We used data from kc_house_data.csv and column_names.md. This data contains the following information:
 
-* **id** - unique identified for a house
-* **date** - house was sold
-* **price** -  is prediction target
-* **bedrooms** -  of Bedrooms/House
-* **bathrooms** -  of bathrooms/bedrooms
-* **sqft_living** -  footage of the home
-* **sqft_lot** -  footage of the lot
+* **id** - unique ID for a house
+* **date** - date house was sold
+* **price** -  price house was sold; is prediction target
+* **bedrooms** -  number of bedrooms
+* **bathrooms** -  number of bathrooms
+* **sqft_living** -  square footage of the home
+* **sqft_lot** -  square footage of the lot
 * **floors** -  floors (levels) in house
-* **waterfront** - House which has a view to a waterfront
-* **view** - Has been viewed
-* **condition** - How good the condition is ( Overall )
-* **grade** - overall grade given to the housing unit, based on King County grading system
+* **waterfront** - house does or does not have a waterfront
+* **view** - how good the property view is
+* **condition** - how good the condition is (1 - 5)
+* **grade** - overall grade given to the housing unit building construction and design, based on King County grading system
 * **sqft_above** - square footage of house apart from basement
 * **sqft_basement** - square footage of the basement
-* **yr_built** - Built Year
-* **yr_renovated** - Year when house was renovated
-* **zipcode** - zip
-* **lat** - Latitude coordinate
-* **long** - Longitude coordinate
-* **sqft_living15** - The square footage of interior housing living space for the nearest 15 neighbors
-* **sqft_lot15** - The square footage of the land lots of the nearest 15 neighbors
+* **yr_built** - year when house was built
+* **yr_renovated** - year when house was renovated
+* **zipcode** - zipcode area of the house
+* **lat** - Latitude
+* **long** - Longitude
+* **sqft_living15** - square footage of interior housing living space for the nearest 15 neighbors
+* **sqft_lot15** - square footage of the land lots of the nearest 15 neighbors
 
 ### Process
 The areas to look at are profitable writers, directors, actors, and actresses, and the best month to release a certain genre. We started by reading in all of the available data from the following files:
