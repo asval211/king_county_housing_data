@@ -14,7 +14,7 @@ A Seattle real estate firm wants their clients to have a prediction for the sale
 
 ## Data
 
-We used data from Box Office Mojo, IMDB, Rotten Tomatoes, TheMovieDB.org and, the-numbers.com. This data contains information that:
+We used data from kc_house_data.csv and column_names.md. This data contains information that:
 
 * Describes how popular movies are
 * The people who worked on the movies
