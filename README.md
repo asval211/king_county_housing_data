@@ -10,7 +10,7 @@ For this project, you will use linear regression to model housing sales in King 
 
 ## Business Problem
 
-A Seattle real estate firm wants their clients to have a prediction for the sale price of their home based on the information of their home. In order to achieve this, they would like a tool that can be as accurate as possible in their predictions. We have come in to create this tool and use it for the real estate firm’s clients.
+A Seattle real estate firm wants their clients to have a prediction for the sale price of their home based on the information of their home. In order to achieve this, they would like a tool that can be as accurate as possible in their predictions. We have come in to create this tool and use it for this real estate firm’s clients.
 
 ## Data
 
