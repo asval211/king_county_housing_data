@@ -33,8 +33,8 @@ We used data from kc_house_data.csv and column_names.md. This data contains the 
 * **yr_built** - year when house was built
 * **yr_renovated** - year when house was renovated
 * **zipcode** - zipcode area of the house
-* **lat** - Latitude
-* **long** - Longitude
+* **lat** - latitude
+* **long** - longitude
 * **sqft_living15** - square footage of interior housing living space for the nearest 15 neighbors
 * **sqft_lot15** - square footage of the land lots of the nearest 15 neighbors
 
