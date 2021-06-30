@@ -2,7 +2,7 @@
 
 # Microsoft Film Production: Data Analysis & Strategy Recommendations
 
-**Authors**: Alex Valencia, Warren Umbach, Jordan Johnson
+**Authors**: Pete VanZandt, Emma Choate, Alex Valencia
 
 ## Overview
 
@@ -10,13 +10,7 @@ This project analyzes the question "What makes a successful movie?" for Microsof
 
 ## Business Problem
 
-Microsoft is deciding how to make a movie. Part of the process is figuring out who to hire and when to release the movie. We used available movie data to find the best people to hire based on profits and what kind of movie is the most popular.
-
-We can provide some good options to choose from for a few different categories. These categories are:
-
-* Genres of movie to make
-* Directors, actors, and actresses to hire based on ratings 
-* Directors, writers, actors, actresses, and movie release month based on profitability
+A Seattle real estate firm wants their clients to have a prediction for the sale price of their home based on the information of their home. In order to achieve this, they would like a tool that can be as accurate as possible in their predictions. We have come in to create this tool and use it for the real estate firm’s clients.
 
 ## Data
 
