@@ -58,9 +58,9 @@ We continued modifying and iterating our model by adding a new feature called **
 We scaled the predictors with our third model using RobustScaler(), we changed our target variable from **price** to **log_price** with our fourth model, and we used fewer features with our fifth model. Unfortunately, none of theses changes brought significant improvement to our model. 
 
 On our sixth model, we added three interaction features:
- - **living_grade** (sqft_living * grade): correlation *0.832*
- - **grade_bath** (grade * bathrooms): correlation *0.824*
- - **living_bath** (sqft_living * bathrooms): correlation *0.819*
+ - **living_grade** (sqft_living * grade)
+ - **grade_bath** (grade * bathrooms)
+ - **living_bath** (sqft_living * bathrooms)
 
 These three interactions were added because they had the strongest combined impact on the price of the home.
 
