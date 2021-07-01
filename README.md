@@ -14,7 +14,7 @@ A Seattle real estate firm wants their clients to have a prediction for the sale
 
 ## Data
 
-We used data from kc_house_data.csv and column_names.md. This data contains the following information:
+We used data from kc_house_data.csv and column_names.md. This data is based on 2015 numbers and contains the following information:
 
 * **id** - unique ID for a house
 * **date** - date house was sold
