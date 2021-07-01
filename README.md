@@ -74,24 +74,17 @@ For our ninth model, we used data from the King_co_zipcodes.csv file and attempt
 On the final model, we removed the poor predictors and simplified our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, and view - and received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model did not change, our bin-error model showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. This is the model we suggest the Seattle real estate firm uses to predict housing prices. 
 
 ## Results
-Our baseline model gave us a train error around 262419, a test error around 259878, and an R-sqaure around 0.488 -- this tells us sqft_living doesn't account for as much variance as we had originally expected. Our residual model showed us there were many outliers in the data and our bin-error model showed us the errors for a few bins were high, especially for houses in the top 10% price range. You will find our baseline model below:
+Our baseline model gave us a train error around 262419, a test error around 259878, and an R-sqaure around 0.488 -- this tells us sqft_living doesn't account for as much variance as we had originally expected. Our residual model showed us there were many outliers in the data. You will find our baseline model below:
 
 ![graph1](./images/simple_model.PNG)
 
-Our final model was simplified to 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, and view. We received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model shows less outliers than the baseline model, our bin-error model showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. You will find our final model below:
+Our final model was simplified to 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, and view. We received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model shows less outliers than the baseline model. You will find our final model below:
 
 ![graph2](./images/suggested_model.PNG)
 
 ## Conclusions
 
-We recommend: 
-* Focus on Adventure and Action genres. 
-* The top five actors are Steve Carell, Neal H, Moritz, Jason Bateman, Dwayne Johnson, and Ben Stiller. The top five actresses are Bryce Dallas Howard, Emma Stone, Kristen Bell, Brie Larson, and Mizuki Sashide.
-* The top five directors are Pierre Coffin, Michael Bay, Rob Muir, Michael Colburn, and Neil Boultby. Choosing any of these would be a good idea.
-* The top five writers by average movie profit are Steve Carell, Jack Kirby, Gary Whitta, Rob Muir, and Amy Poehler. 
-* Release the movie at the beginning of June.
-
-We plotted the most profitable genres by the month that they were released. In general, Adventure and Action do well any time, but it is best to release in June. We suspect that more people can go see movies during the summer so releasing at the beginning is a good move. Additionally, Thriller and Drama movies do well in October for Halloween. Romance movies make an appearance in the top five in February because of Valentine's day, but Action and Adventure are always a safe bet.
+We conclude...
 
 ## For More Information
 
