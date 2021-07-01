@@ -81,10 +81,10 @@ Next, pick some writers who are profitable.
 Finally, pick a release date based on the genre.
 
 ### Visual 1
-![graph1](./images/PopGenres.png)
+![graph1](./images/simple_model.PNG)
 
 ### Visual 2
-![graph2](./images/TopPopDirectos.png)
+![graph2](./images/suggested_model.PNG)
 
 ## Conclusions
 
