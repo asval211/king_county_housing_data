@@ -38,7 +38,7 @@ We used data from kc_house_data.csv and column_names.md. This data contains the 
 * **sqft_living15** - square footage of interior housing living space for the nearest 15 neighbors
 * **sqft_lot15** - square footage of the land lots of the nearest 15 neighbors
 
-We also used King_co_zipcodes.csv to OneHotEncode the zipcodes saved as municipalities.
+We also used King_co_zipcodes.csv to OneHotEncode the zipcodes saved as municipalities. The source of the data came from King County Open Data - https://data.kingcounty.gov/.
 
 ### Process
 We screened the data and looked at the range of total prices to find any patterns. We didn't drop any residual outliers. We saw what features were the most promising by creating correlation plots. We then built a model with the one predictor whose correlation was strongest with price - sqft_living.
