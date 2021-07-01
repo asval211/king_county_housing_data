@@ -45,11 +45,13 @@ We screened the data and looked at the range of total prices to find any pattern
 
 We used an iterative process to create more models and come up with the best predicitability on house prices for all house price ranges.
 
-## Methods
+## Methods & Results
 
 First, we pulled the original dataframe and created three separate functions that would run a multiple regression model, a residual model, and a bin-error model. The bin-error model cuts the dataframe into 10 bins based on house prices, shows us how much error there is in predicting house prices in each bin, and shows us the standard deviation of each bin.
 
-Next, we built our first model using sqft_living as our main predictor because its correlation was strongest with price. Our train error was around 262419, our test error was around 259878, and our R-sqaure was around 0.488 -- this told us that sqft_living didn't account for as much variance as we had originally expected, and there were plenty of other predictors we needed to include in our model. Our residual model showed us there were many outliers in the data and our bin-error model showed us the errors for a few bins were high, especially for houses in the top 10% price range. This is our baseline model.
+Next, we built our first model using sqft_living as our main predictor because its correlation was strongest with price. Our train error was around 262419, our test error was around 259878, and our R-sqaure was around 0.488 -- this told us that sqft_living didn't account for as much variance as we had originally expected, and there were plenty of other predictors we needed to include in our model. Our residual model showed us there were many outliers in the data and our bin-error model showed us the errors for a few bins were high, especially for houses in the top 10% price range. This is our baseline model and you will find our residual model for the baseline below:
+
+![graph1](./images/simple_model.PNG)
 
 We continued modifying and iterating our model by adding a new feature called **area_basement** which was created by subtracting the difference between sqft_living and sqft_above. We added this new feature to 12 other numerical features for this model - bedrooms, bathrooms, sqft_living, sqft_lot, floors, condition, grade, sqft_above, yr_built, zipcode, sqft_living15, and sqft_lot15. Our train error was around 226809, our test error was around 225347, and our R-sqaure was around 0.618 -- our model showed significant improvement compared to the first model based on these results.
 
@@ -71,14 +73,7 @@ In addition, we made a second polynomial model - our eight model - dropping nine
 
 For our ninth model, we used data from the King_co_zipcodes.csv file and attempted to OneHotEncode the zipcodes by municipality. Unfortunately, this made our model worse by increasing the train model to 188339, and test model to 190695, and lowering the R-square to 0.736. Therefore, we did not adopt the OneHotEncoder to our best fit model.
 
-On the final model, we removed the poor predictors and simplified our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, and view - and received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model did not change, our bin-error model showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. This is the model we suggest the Seattle real estate firm uses to predict housing prices. 
-
-## Results
-Our baseline model gave us a train error around 262419, a test error around 259878, and an R-sqaure around 0.488 -- this tells us sqft_living doesn't account for as much variance as we had originally expected. Our residual model showed us there were many outliers in the data. You will find our baseline model below:
-
-![graph1](./images/simple_model.PNG)
-
-Our final model was simplified to 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, and view. We received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model shows less outliers than the baseline model. You will find our final model below:
+On the final model, we removed the poor predictors and simplified our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, and view - and received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model did not change, our bin-error model showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. This is the model we suggest the Seattle real estate firm uses to predict housing prices. You will find our residual model for final model below:
 
 ![graph2](./images/suggested_model.PNG)
 
