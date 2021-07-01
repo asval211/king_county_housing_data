@@ -62,13 +62,13 @@ On our sixth model, we added three interaction features:
 
 We saw significant improvement in this model because our train error decreased to 187242, our test error decreased to 188290, and our R-sqaure increased to 0.739. Our residual model showed us less outliers than the first model. Our bin-error model showed us less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $50,000. We included 20 features to get this output.
 
-Our most complex model came from our seventh model because we ran a polynomial model. We dropped the features id, date, and yr_renovated. We saw even more significant improvement in this model because our train error decreased to 147269, our test error decreased to 165436, and our R-sqaure increased to 0.798. Our residual model looked similar to the sixth model. Our bin-error model showed us even less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $20,000.
+Our best fit model came from our seventh model because we ran a polynomial model. We dropped the features id, date, and yr_renovated. We saw even more significant improvement in this model because our train error decreased to 147269, our test error decreased to 165436, and our R-sqaure increased to 0.798. Our residual model looked similar to the sixth model. Our bin-error model showed us even less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $20,000.
 
-In addition, we made a a second polynomial model dropping nine extreme residuals.
+In addition, we made a a second polynomial model dropping nine extreme residuals. We did this because there were nine houses 
 
 We used data from the King_co_zipcodes.csv file and attempted to OneHotEncode the zipcodes by municipality. Unfortunately, this did not make any improvement to our model and abandoned the OneHotEncoder strategy.
 
-Finally, we removed the poor predictors and simplify our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, view - and received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model did not change, and bin-error model still showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. 
+Finally, we removed the poor predictors and simplified our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, view - and received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model did not change, and bin-error model still showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. This is our suggested model we recommend deploying. 
 
 ## Results
 
