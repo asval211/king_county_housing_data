@@ -38,6 +38,8 @@ We used data from kc_house_data.csv and column_names.md. This data contains the 
 * **sqft_living15** - square footage of interior housing living space for the nearest 15 neighbors
 * **sqft_lot15** - square footage of the land lots of the nearest 15 neighbors
 
+We also used King_co_zipcodes.csv to OneHotEncode the zip codes saved as municipalities.
+
 ### Process
 We screened the data and looked at the range of total prices to find any patterns. We didn't drop any residual outliers. We saw what features were the most promising by creating correlation plots. We then built a model with the one predictor whose correlation was strongest with price - sqft_living.
 
@@ -49,7 +51,7 @@ First, we pulled the original dataframe and created three separate functions tha
 
 Next, we built our first model using sqft_living as our main predictor because its correlation was strongest with price. Our train error was 0.489 and our test error was 0.502 -- this told us that sqft_living didn't account for as much variance as we had originally expected, and there were plenty of other predictors we needed to include in our model. Our residual model showed us there were many outliers in the data and our bin-error model showed us the errors for a few bins were high, especially for houses in the top 10% price range.
 
-We continued modifying our model by adding a new column called **area_basement** which was created by subtracting the difference between sqft_living and sqft_above. We selected 12 numerical features and scaled them using RobustScaler(), and changed our target variable from **price** to **log_price**.
+We continued modifying and iterating our model by adding a new column called **area_basement** which was created by subtracting the difference between sqft_living and sqft_above. We selected 12 numerical features and scaled them using RobustScaler(), and changed our target variable from **price** to **log_price**.
 
 We added three interaction features to the model:
  - **living_bath** (sqft_living * bathrooms)
@@ -58,7 +60,7 @@ We added three interaction features to the model:
 
 We saw significant improvement in this model because our train error increased to 0.74 and our test error increased to 0.739. Our residual model contained less outliers. Our bin-error model showed us less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $50,000. We included 20 features to get this output.
 
-Finally, we used iterative modeling to remove the poor predictors and simplify our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, view - and received a train error of 0.728 and a test error of 0.733. Our residual model did not change, and bin-error model still showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. 
+Finally, we removed the poor predictors and simplify our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, view - and received a train error of 0.728 and a test error of 0.733. Our residual model did not change, and bin-error model still showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. 
 
 ## Results
 
