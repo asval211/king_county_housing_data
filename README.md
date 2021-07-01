@@ -80,10 +80,10 @@ Then, pick from a list of directors, actors, and actresses who are both popular 
 Next, pick some writers who are profitable.
 Finally, pick a release date based on the genre.
 
-### Visual 1
+### Simple Model
 ![graph1](./images/simple_model.PNG)
 
-### Visual 2
+### Suggested Model
 ![graph2](./images/suggested_model.PNG)
 
 ## Conclusions
