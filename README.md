@@ -14,7 +14,7 @@ A Seattle real estate firm wants their clients to have a prediction for the sale
 
 ## Data
 
-We used data from kc_house_data.csv and column_names.md. This data is based on 2015 numbers and contains the following information:
+We used data from kc_house_data.csv and column_names.md. This data is based on the numbers from the year 2015 and contains the following information:
 
 * **id** - unique ID for a house
 * **date** - date house was sold
@@ -64,7 +64,7 @@ We saw significant improvement in this model because our train error decreased t
 
 Our best fit model came from our seventh model because we ran a polynomial model. We dropped the features id, date, and yr_renovated. We saw even more significant improvement in this model because our train error decreased to 147269, our test error decreased to 165436, and our R-sqaure increased to 0.798. Our residual model looked similar to the sixth model. Our bin-error model showed us even less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $20,000.
 
-In addition, we made a a second polynomial model dropping nine extreme residuals. We did this because there were nine houses 
+In addition, we made a second polynomial model dropping nine extreme residuals. We did this because there were nine houses that had a stark difference between the selling price and the predictive price. For example, one of the residuals contained a house with a selling price of $2.3 million and a predictive value of $6 million. After dropping the residuals, we saw our train error drop to 144894, our test error drop to 155990, and our R-sqaure increase to 0.823. Our residual model and our bin-error model stayed constant to the previous polynomial model.
 
 We used data from the King_co_zipcodes.csv file and attempted to OneHotEncode the zipcodes by municipality. Unfortunately, this did not make any improvement to our model and abandoned the OneHotEncoder strategy.
 
