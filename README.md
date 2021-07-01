@@ -60,7 +60,11 @@ On our sixth model, we added three interaction features:
  - **living_grade** (sqft_living * grade)
  - **grade_bath** (grade * bathrooms).
 
-We saw significant improvement in this model because our train error decreased to 187242, our test error decreased to 188290, and our R-sqaure increased 0.739. Our residual model contained less outliers. Our bin-error model showed us less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $50,000. We included 20 features to get this output.
+We saw significant improvement in this model because our train error decreased to 187242, our test error decreased to 188290, and our R-sqaure increased to 0.739. Our residual model showed us less outliers than the first model. Our bin-error model showed us less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $50,000. We included 20 features to get this output.
+
+Our most complex model came from our seventh model because we ran a polynomial model. We dropped the features id, date, and yr_renovated. We saw even more significant improvement in this model because our train error decreased to 147269, our test error decreased to 165436, and our R-sqaure increased to 0.798. Our residual model looked similar to the sixth model. Our bin-error model showed us even less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $20,000.
+
+In addition, we made a a second polynomial model dropping nine extreme residuals.
 
 We used data from the King_co_zipcodes.csv file and attempted to OneHotEncode the zipcodes by municipality. Unfortunately, this did not make any improvement to our model and abandoned the OneHotEncoder strategy.
 
