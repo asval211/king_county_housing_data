@@ -38,7 +38,7 @@ We used data from kc_house_data.csv and column_names.md. This data contains the 
 * **sqft_living15** - square footage of interior housing living space for the nearest 15 neighbors
 * **sqft_lot15** - square footage of the land lots of the nearest 15 neighbors
 
-We also used King_co_zipcodes.csv to OneHotEncode the zip codes saved as municipalities.
+We also used King_co_zipcodes.csv to OneHotEncode the zipcodes saved as municipalities.
 
 ### Process
 We screened the data and looked at the range of total prices to find any patterns. We didn't drop any residual outliers. We saw what features were the most promising by creating correlation plots. We then built a model with the one predictor whose correlation was strongest with price - sqft_living.
@@ -59,6 +59,9 @@ We added three interaction features to the model:
  - **grade_bath** (grade * bathrooms).
 
 We saw significant improvement in this model because our train error increased to 0.74 and our test error increased to 0.739. Our residual model contained less outliers. Our bin-error model showed us less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $50,000. We included 20 features to get this output.
+
+We used data from the King_co_zipcodes.csv file and attempted to OneHotEncode the zipcodes by municipality. Unfortunately, this brought a 5% decrease to both
+our train error and test error. Therefore, we abandoned this model.
 
 Finally, we removed the poor predictors and simplify our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, view - and received a train error of 0.728 and a test error of 0.733. Our residual model did not change, and bin-error model still showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. 
 
