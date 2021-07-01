@@ -43,11 +43,6 @@ We screened the data and looked at the range of total prices to find any pattern
 
 We used an iterative process to create more models and come up with the best predicitability on house prices for all house price ranges.
 
-- **Name.basics**
-- **Title.basics**
-- **Title.crew**
-- **Tn.movie_budgets**
-
 ## Methods
 
 First, we pulled the original dataframe and created three separate functions that would run a multiple regression model, a residual model, and a bin-error model. The bin-error model cuts the dataframe into 10 bins based on house prices, shows us how much error there is in predicting house prices in each bin, and shows us the standard deviation of each bin.
