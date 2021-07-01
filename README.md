@@ -86,15 +86,6 @@ Finally, pick a release date based on the genre.
 ### Visual 2
 ![graph2](./images/TopPopDirectos.png)
 
-### Visual 3
-![graph3](./images/ProfitableDirectors.png)
-
-### Visual 4
-![graph4](./images/ProfitableActorsActresses.png)
-
-### Visual 5
-![graph5](./images/ProfitableWriters.png)
-
 ## Conclusions
 
 We recommend: 
