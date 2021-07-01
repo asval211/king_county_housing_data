@@ -6,7 +6,7 @@
 
 ## Overview
 
-For this project, we used linear regression to model housing sales in King County, a northwestern county in Washington state.
+For this project, we used linear regression to model housing sales in King County, a northwestern county in Washington state that includes Seattle.
 
 ## Business Problem
 
