@@ -14,7 +14,7 @@ A Seattle real estate firm wants their clients to have a prediction for the sale
 
 ## Data
 
-We used data from kc_house_data.csv and column_names.md. This data is based on the numbers from the year 2015 and contains the following information:
+We used data from kc_house_data.csv and column_names.md. This data is based on the numbers between the years 2014 - 2015 and contains the following information:
 
 * **id** - unique ID for a house
 * **date** - date house was sold
@@ -71,19 +71,15 @@ In addition, we made a second polynomial model - our eight model - dropping nine
 
 For our ninth model, we used data from the King_co_zipcodes.csv file and attempted to OneHotEncode the zipcodes by municipality. Unfortunately, this made our model worse by increasing the train model to 188339, and test model to 190695, and lowering the R-square to 0.736. Therefore, we did not adopt the OneHotEncoder to our best fit model.
 
-On the final model, we removed the poor predictors and simplified our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, view - and received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model did not change, and bin-error model showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. This is the model we suggest the Seattle real estate firm uses to predict housing prices. 
+On the final model, we removed the poor predictors and simplified our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, and view - and received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model did not change, our bin-error model showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. This is the model we suggest the Seattle real estate firm uses to predict housing prices. 
 
 ## Results
+Our baseline model gave us a train error around 262419, a test error around 259878, and an R-sqaure around 0.488 -- this tells us sqft_living doesn't account for as much variance as we had originally expected. Our residual model showed us there were many outliers in the data and our bin-error model showed us the errors for a few bins were high, especially for houses in the top 10% price range. You will find our baseline model below:
 
-We would suggest picking a genre of movie to make based on what is popular. 
-Then, pick from a list of directors, actors, and actresses who are both popular and profitable.
-Next, pick some writers who are profitable.
-Finally, pick a release date based on the genre.
-
-### Simple Model
 ![graph1](./images/simple_model.PNG)
 
-### Suggested Model
+Our final model was simplified to 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, and view. We received a train error around 191327, a test error around 190102, and an R-sqaure around 0.728. Our residual model shows less outliers than the baseline model, our bin-error model showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. You will find our final model below:
+
 ![graph2](./images/suggested_model.PNG)
 
 ## Conclusions
