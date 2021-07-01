@@ -50,15 +50,20 @@ We used an iterative process to create more models and come up with the best pre
 
 ## Methods
 
-First, we combined existing data into one dataframe and then we dropped some columns that we didn’t need.
-Next, we cleaned the data by reformatting some columns like the budget and gross columns to remove commas, dollar signs, and other delimiters.
-Finally, we each made our own barplots to visualize the data.
+First, we pulled the original dataframe and created three separate functions that would run a multiple regression model, a residual model, and a bin-error model. The bin-error model cuts the dataframe into 10 bins based on house prices, shows us how much error there is in predicting house prices in each bin, and shows us the standard deviation of each bin.
 
-After looking at all available data, we merged them into one data frame we called tcombo. We needed to rename a primary_title column to ‘movie’ so that we could use it to merge the title.name data frame. Next, we dropped unnecessary columns from the merged data frame. We used outer merges so we had a lot of extra rows with missing data. We did this so that we could have more control over which data we wanted to drop. We solved this by dropping rows in only a subset of columns. This subset does not contain the budget production and grossing columns. It is fine if either domestic or worldwide gross is missing, but not both and we took care of that next. Then, we dropped all rows where the budget was missing or zero. We did not want to include movies without a budget because that would throw off the profit. Next, we made the budget and gross columns into float data types so that we could use them to make a profit column. We started by removing commas and dollar signs and finished by casting them as floats. Last, we made a profit column that was the difference between the worldwide gross and production budget.
+Next, we built our first model using sqft_living as our main predictor because its correlation was strongest with price. Our train error was 0.489 and our test error was 0.502 -- this told us that sqft_living didn't account for as much variance as we had originally expected, and there were plenty of other predictors we needed to include in our model. Our residual model showed us there were many outliers in the data and our bin-error model showed us the errors for a few bins were high, especially for houses in the top 10% price range.
 
-The next problem was that the profession and genre columns contained comma-separated lists. We needed to put each genre and profession onto its row. We started by splitting each entry into commas. This turned them into list types. Next, we used the explode method and passed each column. This moved each list entry to its row and copied the rest of the columns down to it. Now we could find all rows where genre or profession is a specified value. 
+We continued modifying our model by adding a new column called **area_basement** which was created by subtracting the difference between sqft_living and sqft_above. We selected 12 numerical features and scaled them using RobustScaler(), and changed our target variable from **price** to **log_price**.
 
-We wanted to compare different genres and professions to the profit those movies made. We made new data frames that included only directors, writers, and actors, and actresses. Then, we could find the median profit of each movie that each person participated in.
+We added three interaction features to the model:
+ - **living_bath** (sqft_living * bathrooms)
+ - **living_grade** (sqft_living * grade)
+ - **grade_bath** (grade * bathrooms).
+
+We saw significant improvement in this model because our train error increased to 0.74 and our test error increased to 0.739. Our residual model contained less outliers. Our bin-error model showed us less errors in all 10 bins -- 9 out of 10 bins contained errors that were less than $50,000. We included 20 features to get this output.
+
+Finally, we used iterative modeling to remove the poor predictors and simplify our model. We kept 13 features - bedrooms, bathrooms, sqft_living, floors, condition, grade, yr_built, zipcode, grade * bath, lat, waterfront, long, view - and received a train error of 0.728 and a test error of 0.733. Our residual model did not change, and bin-error model still showed us our errors for 9 out of 10 bins were less than $50,000, and our Q-Q Plot revealed our data was under-disperesed which means we reduced the number of outliers in our data. 
 
 ## Results
 
