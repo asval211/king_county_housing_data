@@ -95,8 +95,8 @@ Describe the structure of your repository and its contents, for example:
 
 ```
 ├── README.md                           <- The top-level README for reviewers of this project
-├── Emma_Alex_Pete_house_analysis.ipynb   <- Narrative documentation of analysis in Jupyter notebook
-├── KC_Presentation.pdf         <- PDF version of project presentation
+├── Emma_Alex_Pete_house_analysis.ipynb <- Narrative documentation of analysis in Jupyter notebook
+├── KC_Presentation.pdf                 <- PDF version of project presentation
 ├── data                                <- Both sourced externally and generated from code
 └── images                              <- Both sourced externally and generated from code
 
