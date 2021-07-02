@@ -85,7 +85,7 @@ On the final model, we removed the poorest predictors and simplified our model. 
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./microsoft_movie_analysis_final.ipynb) or our [presentation](./Microsoft_Movie_Analysis_Presentation.pdf)
+Please review our full analysis in [our Jupyter Notebook](./notebooks/exploratory/pete/Emma_Alex_Pete_house_analysis.ipynb) or our [presentation](./Microsoft_Movie_Analysis_Presentation.pdf)
 
 For any additional questions, please contact **Pete VanZandt - pevanzandt@gmail.com, Emma Choate - emmachoate11@gmail.com, Alex Valencia - asvalencia1688@gmail.com**
 
