@@ -85,7 +85,7 @@ On the final model, we removed the poorest predictors and simplified our model. 
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./notebooks/exploratory/pete/Emma_Alex_Pete_house_analysis.ipynb) or our [presentation](./Microsoft_Movie_Analysis_Presentation.pdf)
+Please review our full analysis in [our Jupyter Notebook](./notebooks/exploratory/pete/Emma_Alex_Pete_house_analysis.ipynb) or our [presentation](./KC_Presentation.pdf)
 
 For any additional questions, please contact **Pete VanZandt - pevanzandt@gmail.com, Emma Choate - emmachoate11@gmail.com, Alex Valencia - asvalencia1688@gmail.com**
 
@@ -95,7 +95,7 @@ Describe the structure of your repository and its contents, for example:
 
 ```
 ├── README.md                           <- The top-level README for reviewers of this project
-├── microsoft_movie_analysis_final.ipynb   <- Narrative documentation of analysis in Jupyter notebook
-├── Microsoft_Movie_Analysis_Presentation.pdf         <- PDF version of project presentation
+├── Emma_Alex_Pete_house_analysis.ipynb <- Narrative documentation of analysis in Jupyter notebook
+├── KC_Presentation.pdf                 <- PDF version of project presentation
 ├── data                                <- Both sourced externally and generated from code
 └── images                              <- Both sourced externally and generated from code
